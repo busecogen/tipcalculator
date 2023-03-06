@@ -44,7 +44,10 @@ $(function () {
       if (this.value == "" || isNaN(this.value)) {
         this.value = 0;
       }
-    });
+    })
+    .on("click",function(){
+      $(this).css("color","hsl(183, 100%, 15%)");
+    })
 
   $("#bill")
     .mask("9999999.99", { reverse: true })
@@ -115,6 +118,8 @@ $(function () {
       $("#people").val("0");
       $("#tipmoney").text("$" + "0.00");
       $("#totalmoney").text("$" + "0.00");
+      $(".user").css("color","hsl(185, 41%, 84%)");
+
     })
     .on("mouseenter", function () {
       if (resettable) $(this).css("background-color", "hsl(185, 41%, 84%)");
